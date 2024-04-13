@@ -28,4 +28,9 @@ const images = [
   },
 ];
 
+// MILESTONE 1, creare dinamicamente il contenuto del carosello
 
+// Chiamo la funzione per creare il contenuto in pagina
+createCarouselContent(images);
+
+//  MILESTONE 2
