@@ -37,13 +37,13 @@ printImages(images);
 const imageElems = document.querySelectorAll(".my-carousel-item"); // array di elementi nel DOM
 console.log(imageElems);
 
-// Attiva il primo elemento
+// Attivo il primo elemento
 imageElems[activeIndex].classList.add("active");
 
-// Aggiungi event listener per il click sulla freccia "next"
+// Aggiungo event listener per il click sulla classe next
 document.querySelector(".my-next").addEventListener("click", showNext);
 
-// Aggiungi event listener per il click sulla freccia "prev"
+// Aggiungo event listener per il click sulla classe previous
 document.querySelector(".my-previous").addEventListener("click", showPrev);
 
 ///////////////
@@ -68,9 +68,11 @@ function showPrev() {
 }
 ///////////////
 
+// Stampo dinamicamente il dom
+
 function printImages() {
   const carouselContainer = document.querySelector(".my-carousel-images");
-  carouselContainer.innerHTML = ""; // Pulisce il contenuto precedente
+  carouselContainer.innerHTML = ""; 
   images.forEach((image) => {
     carouselContainer.innerHTML += `
     <div class="my-carousel-item" carousel-item="1"> <!-- Rimuove la classe "active" iniziale -->
@@ -91,22 +93,22 @@ function printImages() {
 
 // BONUS 1
 
-// Seleziona il contenitore delle miniature
+// Seleziono il thumbnails
 const thumbnailsContainer = document.querySelector(".my-thumbnails");
 
-// Seleziona tutte le miniature all'interno del contenitore
+// Seleziono tutte le miniature all'interno del contenitore
 const thumbnails = thumbnailsContainer.querySelectorAll("img");
 
-// Aggiungi un event listener a ciascuna miniatura
+// Aggiungo un event listener ad ogni miniatura
 thumbnails.forEach((thumbnail, index) => {
   thumbnail.addEventListener("click", () => {
-    // Rimuovi la classe 'active' da tutte le immagini del carosello
+    
+    // Rimuovo la classe "active" da tutte le immagini del carosello
     imageElems.forEach((image) => image.classList.remove("active"));
-
-    // Aggiungi la classe 'active' all'immagine corrispondente
+    // Aggiungo la classe "active" all'immagine corrispondente
     imageElems[index].classList.add("active");
 
-    // Aggiorna l'indice attivo
+    // Aggiorna l'indice
     activeIndex = index;
   });
 });
