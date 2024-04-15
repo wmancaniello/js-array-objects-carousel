@@ -26,7 +26,7 @@
     />
 
     <!-- Custom style -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
 
     <title>JS Array Carousel with Objects</title>
   </head>
@@ -41,33 +41,61 @@
               class="my-carousel-container d-flex flex-column px-5"
               id="my-carousel"
             >
-              <div class="my-carousel-images" id="carousel-images">
-                <!-- Carosello -->
+              <div class="my-carousel-images">
+                <!-- immagini -->
               </div>
-              <div
-                class="my-thumbnails position-relative"
-                id="carousel-thumbnails"
-              >
-                <!-- Thumbnails -->
+              <div class="my-thumbnails position-relative">
+                <!-- prev -->
+                <div class="my-previous position-absolute">
+                  <span class="my-prev-hook"></span>
+                </div>
+                <!-- next -->
+                <div class="my-next position-absolute">
+                  <span class="my-next-hook"></span>
+                </div>
+                <!-- immagini interne -->
+                <img
+                  class="img-fluid my-thumbnail active"
+                  src="./img/01.webp"
+                  alt="Thumbnail of Marvel's Spiderman Miles Morale picture"
+                />
+                <img
+                  class="img-fluid my-thumbnail"
+                  src="./img/02.webp"
+                  alt="Thumbnail of Ratchet & Clank: Rift Apart picture"
+                />
+                <img
+                  class="img-fluid my-thumbnail"
+                  src="./img/03.webp"
+                  alt="Thumbnail of Fortnite"
+                />
+                <img
+                  class="img-fluid my-thumbnail"
+                  src="./img/04.webp"
+                  alt="Thumbnail of Stray"
+                />
+                <img
+                  class="img-fluid my-thumbnail"
+                  src="./img/05.webp"
+                  alt=" Thumbnail of Marvel's Avengers"
+                />
               </div>
             </div>
           </div>
 
           <div class="col-12 p-3" id="my-after-carousel">
-            <!-- Button di navigazione -->
-            <button id="my-previous-button" class="btn btn-primary my-previous">
-              <i class="fas fa-chevron-left"></i> Precedente
+            <button id="my-order-button" class="btn btn-primary">
+              Inverti l'ordine di scorrimento
             </button>
-            <button id="my-next-button" class="btn btn-primary my-next">
-              Successivo <i class="fas fa-chevron-right"></i>
+            <button id="my-stop-button" class="btn btn-primary">
+              Interrompi / Fai ripartire lo scorrimento
             </button>
           </div>
         </div>
       </div>
     </main>
 
-    <!-- Custom Script -->
-    <script src="./js/function.js"></script>
-    <script src="./js/script.js"></script>
+    <!-- CUSTOM SCRIPT -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
